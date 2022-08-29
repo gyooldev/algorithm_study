@@ -4,7 +4,7 @@
 
 - 기간: 2022년 8월 29일~
 - 정기 회의: 월요일 오전
-- 참고 사이트: [프로그래머스](https://programmers.co.kr/learn/challenges), [백준](https://www.acmicpc.net/)
+- 참고 사이트: [프로그래머스](https://programmers.co.kr/learn/challenges),[리트코드](https://leetcode.com/), [백준](https://www.acmicpc.net/)
 - 언어: 자바스크립트, 파이썬
 
 ## 스터디 규칙 
@@ -43,11 +43,15 @@
 
 - [Baekjoon-폴더명] 이름
 
+- [Leetcode-폴더명] 이름
+
 #### Commit Message
 
 - [Programmers-문제번호] 문제명
 
 - [Baekjoon-문제번호] 문제명
+
+- [Leetcode-폴더명] 이름
 
 ## 파일 및 폴더 구조
 
@@ -63,6 +67,12 @@
 - Baekjoon/bin/폴더명/문제번호_문제명.js
 - Baekjoon/byunghoon/폴더명/문제번호_문제명.js
 
+
+#### Leetcode (미정)
+
+- Leetcode/kyuri/폴더명/문제번호_문제명.js
+- Leetcode/bin/폴더명/문제번호_문제명.js
+- Leetcode/byunghoon/폴더명/문제번호_문제명.js
 
 
 
