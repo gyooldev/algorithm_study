@@ -22,7 +22,3 @@ function solution(participant, completion) {
 
   return answer;
 }
-
-console.log(
-  solution(["mislav", "stanko", "mislav", "ana"], ["stanko", "ana", "mislav"])
-);
