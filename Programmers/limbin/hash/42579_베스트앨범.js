@@ -11,6 +11,7 @@ function solution(genres, plays) {
         }
 
     }
+
     genres.forEach((val, index) => {
 
         if (idx.has(val)) {
@@ -18,20 +19,25 @@ function solution(genres, plays) {
         } else {
             idx.set(val, [[index, plays[index]]])
         }
-    })
-    const maxSum = new Map([...sum.entries()].sort((a, b) => b[1] - a[1]))
-    const maxIdx = new Map([...idx.entries()].sort((a, b) => {
-        a[1].sort((a, b) => b[0] + b[1] - (a[0] + a[1]))
-        b[1].sort((a, b) => b[0] + b[1] - (a[0] + a[1]))
-    }))
 
+    })
+
+
+    const maxSum = new Map([...sum.entries()].sort((a, b) => b[1] - a[1]))
+
+    idx.forEach((value, key) => {
+        value.sort((a, b) => {
+            if (b[1] === a[1]) return a[0] - b[0] // play수 가 같다면 index를 기준으로 
+            return b[1] - a[1]               // sort해준다는 의미!
+        })
+    })
+
+    const maxIdx = new Map([...idx.entries()])
     for (let key of maxSum) {
-        if (maxIdx.get(key[0]).length === 1) {
-            answer.push(maxIdx.get(key[0])[0][0])
-            return answer
-        }
         for (let a = 0; a < 2; a++) {
-            answer.push(maxIdx.get(key[0])[a][0])
+            if (maxIdx.get(key[0])[a]) {
+                answer.push(maxIdx.get(key[0])[a][0])
+            };
         }
     }
     return answer
