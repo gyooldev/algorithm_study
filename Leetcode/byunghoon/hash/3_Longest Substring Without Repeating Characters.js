@@ -1,3 +1,5 @@
+//풀이 방법 맘에 안듬
+
 /**
  * @param {string} s
  * @return {number}
